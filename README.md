@@ -11,6 +11,8 @@ OutlookScripts: Scripts required to enable the "auto-sort sent mail" function.
   This is different than the build-in feature, as the built-in feature always saves to the same folder and doesn't give you an option to save in a different
   location with each email. 
   
+XMLVerification: This script is used on a particular Excel Sheet. User runs the script, selects a particular eIndex.xml file to check, and the script will validate the eIndex file. 
+  
     LIST OF MACROS IN TOOLKIT:
     
     CommaSeparate
