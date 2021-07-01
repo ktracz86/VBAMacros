@@ -15,6 +15,11 @@ XMLVerification: This script is used on a particular Excel Sheet. User runs the 
   
     LIST OF MACROS IN TOOLKIT:
     
+    HyperlinkPMRA
+      When an excel spreadsheet contains a list of PMRA numbers, this macro allows the officer to
+      select the column where the PMRA numbers are, and it will automatically generate a hyperlinks 
+      to the file. 
+    
     CommaSeparate
       This essentially concatenates all values in a single column, and separates them with a comma. 
       This is useful if running a report that will generate search criteria for another search query.
