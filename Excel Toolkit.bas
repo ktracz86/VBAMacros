@@ -1,6 +1,37 @@
 Option Explicit
 Option Compare Text
 
+Sub HyperlinkPMRA()
+'This sub allows the user to choose a column of PMRA numbers and it will automatically turn them into links
+ Dim RowCount, i, headers, s As Integer
+ Dim link As String
+ Dim c As Variant
+ 
+ ' The prefix for the URL is "http://pmra-pw1.hc-sc.gc.ca:7778/ePRS/dox_web.v?p_ukid="&[PMRANUMBER]
+ link = "http://pmra-pw1.hc-sc.gc.ca:7778/ePRS/dox_web.v?p_ukid="
+ 
+ 'User selects which column the PMRA number is
+ c = InputBox("Which column contains the PMRA Numbers?", "Select Column", "Enter")
+ 
+ 'Asking officer if there's are headers. If there are, then row count will start at row 2. Otherwise, we'll start at Row 1.
+ 
+ headers = MsgBox("Are there headers?", vbQuestion + vbYesNo, "Headers?")
+ If headers = vbYes Then
+    s = 2
+ Else
+    s = 1
+ End If
+ 
+ RowCount = WorksheetFunction.CountA(Range(c & ":" & c)) 'find the amount of rows in the sheet
+ 
+ For i = s To RowCount
+    If Range(c & i).Value > 1 Then
+        Application.ActiveSheet.Hyperlinks.Add Anchor:=Range(c & i), Address:=link & Range(c & i).Value
+    End If
+Next i
+
+End Sub
+
 Sub CommaSeparate()
     Dim sourceColumn As Variant
     Dim i As Long
