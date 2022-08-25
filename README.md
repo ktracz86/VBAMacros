@@ -8,7 +8,7 @@ Certain reports need to be created before hand and formatted in a particular way
   
 OutlookScripts: Scripts required to enable the "auto-sort sent mail" function.
   After users hit Send on an email, it will prompt the user to select which folder the sent mail should be filed away. 
-  This is different than the build-in feature, as the built-in feature always saves to the same folder and doesn't give you an option to save in a different
+  This is different than the built-in feature, as the built-in feature always saves to the same folder and doesn't give you an option to save in a different
   location with each email. 
   
 XMLVerification: This script is used on a particular Excel Sheet. User runs the script, selects a particular eIndex.xml file to check, and the script will validate the eIndex file. 
