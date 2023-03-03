@@ -7,8 +7,8 @@ Sub HyperlinkPMRA()
  Dim link As String
  Dim c As Variant
  
- ' The prefix for the URL is "http://pmra-pw1.hc-sc.gc.ca:7778/ePRS/dox_web.v?p_ukid="&[PMRANUMBER]
- link = "http://pmra-pw1.hc-sc.gc.ca:7778/ePRS/dox_web.v?p_ukid="
+ ' The prefix for the URL is "http://pmra-pw1.hc-sc.gc.ca:7777/ePRS/dox_web.v?p_ukid="&[PMRANUMBER]
+ link = "http://pmra-pw1.hc-sc.gc.ca:7777/ePRS/dox_web.v?p_ukid="
  
  'User selects which column the PMRA number is
  c = InputBox("Which column contains the PMRA Numbers?", "Select Column", "Enter")
